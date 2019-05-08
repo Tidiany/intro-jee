@@ -1,0 +1,147 @@
+<%-- any content can be specified here e.g.: --%>
+        </div>
+
+        <!--Modal d'enregistrement de location....................................-->
+        <div class="modal fade" id="newLocationModal" tabindex="-1" role="dialog" aria-labelledby="titrePopUp" aria-hidden="true"> 
+            <div class="modal-dialog">
+                <div class="modal-content"> 
+                    <!-- le titre de la popup --> 
+                    <div class="modal-header"> 
+                        <h4 class="modal-title" id="titrePopUp">Nouvelle location </h4>
+                        <!-- lla croix de fermeture de la popup --> 
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button> 
+                    </div> 
+
+                    <form method="post" action="">
+                        <!-- le contenu HTML de la popup --> 
+                        <div class="modal-body">
+                            <fieldset class="fieldset">
+                                <legend>Client</legend>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="numPiece">Numero piece</label>
+                                            <input type="text" id="numPiece" name="numpiece" class="form-control"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="nom">Nom</label>
+                                            <input type="text" id="nom" name="nom" class="form-control"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="prenom">Prenom</label>
+                                            <input type="text" id="prenom" name="prenom" class="form-control"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="dateNaiss">Date de Naissance</label>
+                                            <input type="date" id="dateNaiss" name="dateNaiss" class="form-control"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="tel">Telephone</label>
+                                            <input type="text" id="tel" name="tel" class="form-control"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="email">Email</label>
+                                            <input type="text" id="email" name="email" class="form-control"/>
+                                        </div>
+                                    </div>                
+                                </div>
+                            </fieldset>
+                            <fieldset class="fieldset">
+                                <legend>Voiture</legend>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="marqueSelect">Marque</label>
+                                            <select id="marqueSelect" name="marque" class="form-control">
+                                                <option value="">Selectionnez une marque</option>
+                                                <c:forEach items="${marques}" var="marque">
+                                                    <option value="${marque.id}">${marque.libelle}</option>
+                                                </c:forEach>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="modele">Modele</label>
+                                            <select id="modele" name="modele" class="form-control">
+                                                <option value="">Selectionnez une modele</option>
+                                                <c:forEach items="${modeles}" var="modele">
+                                                    <option value="${modele.id}">${modele.libelle}</option>
+                                                </c:forEach>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label for="matricule">Matricule</label>
+                                            <input type="text" id="matricule" name="matricule" class="form-control"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label for="couleur">Couleur</label>
+                                            <input type="text" readonly id="couleur" name="couleur" class="form-control"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label for="prixParJour">Prix Par Jour</label>
+                                            <input type="text" readonly id="prixParJour" name="prixParJour" class="form-control"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset class="fieldset">
+                                <legend>Location</legend>
+                                <div class="row">
+                                    <div class="col-sm-5">
+                                        <div class="form-group">
+                                            <label for="nbrJour">Nombre de jour</label>
+                                            <input type="text" id="nbrJour" name="nbrJour" class="form-control"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="montant">Montant</label>
+                                            <input type="text" readonly id="montant" name="montant" class="form-control"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-7">
+                                        <label for="remarque">Remarque</label>
+                                        <textarea class="form-control" id="remarque" rows="5"></textarea>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+
+                        <!-- le pied de page de la popup --> 
+                        <div class="modal-footer">
+                            <button type="submit" id="saveNewLocation" class="btn btn-primary">Enregistrer</button>
+                            <button type="button" id="closeNewLocationModal" class="btn btn-danger">Fermer</button>
+                        </div> 
+                    </form>
+                </div> 
+            </div> 
+        </div>
+        <!--Modal d'enregistrement de location....................................-->
+
+        <script src="js/jquery-3.3.1.js" type="text/javascript"></script>
+        <script src="js/bootstrap/bootstrap.js" type="text/javascript"></script>
+        <script src="js/script.js" type="text/javascript"></script>
+
+    </body>
+</html>

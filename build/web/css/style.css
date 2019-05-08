@@ -1,0 +1,125 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 22 avr. 2019, 13:48:16
+    Author     : Tidiany
+*/
+body{
+    font-family: time new roman;
+    background: linear-gradient(to left, #000, #eb9316, #000);
+    min-height: 55rem;
+    padding-top: 4.5rem;
+}
+#connection{
+    width: 40%;
+    margin: auto;
+    margin-top: 100px;
+    padding: 10px;
+    box-shadow: 2px 2px 5px 3px lightgray;
+    background: radial-gradient(black, darkgoldenrod);
+    opacity: 0.8;
+}
+#connection #header{
+    text-align: center;
+    padding-bottom: 5px;
+    border-bottom: darkgoldenrod solid medium;
+}
+.btn{
+    font-family: time new roman;
+}
+.btn-primary{
+    background: transparent;
+    color: darkgoldenrod;
+    border: darkgoldenrod 1px double;
+    box-shadow: 0px 0px 5px 2px darkgoldenrod inset;
+}
+.btn-primary:focus{
+    background: radial-gradient(darkgoldenrod, black);
+    border: darkgoldenrod 1px double;
+    box-shadow: 1px 1px 5px 2px goldenrod;
+    color: whitesmoke;
+}
+.btn-primary:hover{
+    cursor: pointer;
+    background: radial-gradient(darkgoldenrod, black);
+    border: darkgoldenrod 1px double;
+    box-shadow: 1px 1px 5px 2px goldenrod;
+    color: whitesmoke;
+}
+.form-control:focus {
+    color: #464a4c;
+    background-color: #fff;
+    border-color: darkgoldenrod;
+    box-shadow: 1px 1px 1px 1px lightgray;
+    outline: none;
+}
+#container{
+    width: 80%;
+    margin: auto;
+    background: repeating-radial-gradient(circle, lightgray, #fff 3px);
+    /*color: lightgray;*/
+    opacity: 0.8;
+    min-height: 700px;
+    box-shadow: 1px 1px 5px 3px darkgoldenrod;
+    padding: 15px;
+}
+.msg{
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+}
+.msg-error{
+    color: red;
+}
+.msg-success{
+    color: green;
+}
+.msg-warning{
+    color: darkgoldenrod;
+}
+/*...*/
+nav ul > li > a:hover, nav ul > li > a:focus{
+    text-shadow: lightgrey 0px 1px;
+    color: darkgoldenrod !important;
+    box-shadow: 0px 0px 1px 1px darkgoldenrod;
+}
+.dropdown-item:hover{
+    color: darkgoldenrod !important;
+    box-shadow: 0px 0px 1px 1px darkgoldenrod;
+    outline: 15px;
+}
+.img-circle{
+    border-radius: 50%;
+}
+.img-40{
+    width: 40px;
+    height: 40px;
+}
+.titre{
+    border-bottom: darkgoldenrod ridge medium;
+    text-shadow:darkgrey 3px 2px;
+}
+.pull-right{
+    float: right;
+}
+.shadow-0-3{
+    box-shadow: 0px 0px 3px 3px lightgray;
+}
+
+fieldset{
+    box-shadow: 0px 0px 2px 3px lightgray;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+fieldset legend{
+    background: linear-gradient(to right, #fff, darkgoldenrod);
+}
+.modal-header, .modal-footer{
+    background: repeating-radial-gradient(darkgoldenrod, #fff 2px)
+}
+#closeNewLocationModal:hover{
+    cursor: pointer;
+}
